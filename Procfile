@@ -1,0 +1,1 @@
+web: gunicorn belly_bacteria.app:app
