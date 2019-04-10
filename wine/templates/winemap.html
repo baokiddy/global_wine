@@ -39,10 +39,6 @@
           font-size: 3.5rem;
         }
       }
-
-      .footer {
-        height: 5%;
-      }
     </style>
 
   
@@ -61,22 +57,12 @@
       </nav>
     </header>
 
-    <div class="jumbotron">
-      <!-- rear window -->
-      <div class="row"></div>
-      <div class='container one'></div>
+    <div class="jumbotron" style="height:80%">
+      
+      <!-- <div class="row">
 
-      <main role="main" class="inner cover text-center">
-        <h1 class="cover-heading">Discover wine around the globe.</h1>
-        <p class="lead"> We want to take you on a journey to find and view new wines from different regions around the world. 
-          Click below to see a map visualizing different wineries and a short summery on their stories! </p>
-        <p class="lead">
-          <a href="winemap.html" class="btn btn-lg-center btn-secondary text-center">Map of Wine Around the Globe</a>
-        </p>
-      </main>
+      </div> -->
 
-    <div class='modal'></div>
-    <div class='overlay'></div>
 
     </div>
 
@@ -86,51 +72,6 @@
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
-
-
-      <script>
-
-      function randomNumbers(min,max)
-      {
-          return Math.floor(Math.random()*(max-min+1)+min);
-      }
-
-      $container1 = $(".one");
-      for(var i = 0; i < 82; i++){
-        
-        $img = $("<div>").addClass("item rear-window").attr("data-order", i);
-        $container1.append($img);
-      }
-
-
-      var idx1 = 1;
-      $(".rear-window").each(function() {
-          
-          $(this).css({left: (idx1-1) * 15});
-          $(this).css("background-image", "url("+"images/rear-Window/"+idx1+".png)");
-          idx1++;
-      });
-
-
-      $(".item").on("mouseover",function(e) {
-          
-          var current = $(this).data().order;
-          var leftdif = ((current/81)*200)/current;
-          var rightdif = (200-((current/81)*200))/(80-current);
-          var wid = 15-(200-15)/81;
-
-          $(".item").css({"width": "15px", "-webkit-transform": "translate(0,0)"})
-          $(this).css({"width": "215px",  "-webkit-transform": "translate(-"+(current/81)*200+"px,0)"});
-          $(this).prevAll(".item").each(function() {$( this ).css({"width": wid+"px", "-webkit-transform": "translate(-"+$(this).data().order*leftdif+"px,0)"});});
-          $(this).nextAll(".item").each(function() {$( this ).css({"width": wid+"px", "-webkit-transform": "translate("+(81-$(this).data().order)*rightdif+"px,0)"});});
-          console.log(current);
-      });
-
-      $(".item").mouseout(function(e) {
-        $(".item").css({"width": "15px", "-webkit-transform": "translate(0,0)"});
-      });
-
-      </script>
 
   </footer>
 
