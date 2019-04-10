@@ -41,27 +41,35 @@ def index():
 
 @app.route("/api")
 def api():
-    results = session.query(table)
-    all_wines = []
+    results = pd.read_sql_table('data', con=engine)
+    # results = results.reset_index(drop=True)
+    return results.to_json(orient = 'table', index = False)
 
-    for wine in results:
-        wine_dict = {}
-        wine_dict['country']= wine.country
-        wine_dict['description']= wine.description
-        wine_dict['points']= wine.points
-        wine_dict['price']= wine.price
-        wine_dict['province']= wine.province
-        wine_dict['region']= wine.region
-        wine_dict['taster_name']= wine.taster_name
-        wine_dict['taster_twitter_handle']= wine.taster_twitter_handle        
-        wine_dict['title']= wine.title
-        wine_dict['variety']= wine.variety
-        wine_dict['winery']= wine.winery
-        wine_dict['address']= wine.address
-        wine_dict['lats']= wine.lats
-        wine_dict['lngs']= wine.lngs
-        all_wines.append(wine_dict)
-    return jsonify(all_wines)
+
+
+
+
+    # all_wines = []
+
+    # for i in range(0, 73100):
+    #     wine_dict = {}
+    #     wine_dict['country']= results['country'][i]
+    #     wine_dict['description']= results['description'][i]
+    #     wine_dict['points']= results['points'][i]
+    #     wine_dict['price']= results['price'][i]
+    #     wine_dict['province']= results['province'][i]
+    #     wine_dict['region']= results['region'][i]
+    #     wine_dict['taster_name']= results['taster_name'][i]
+    #     wine_dict['taster_twitter_handle']= results['taster_twitter_handle'][i]        
+    #     wine_dict['title']= results['title'][i]
+    #     wine_dict['variety']= results['variety'][i]
+    #     wine_dict['winery']= results['winery'][i]
+    #     wine_dict['address']= results['address'][i]
+    #     wine_dict['lats']= results['lats'][i]
+    #     wine_dict['lngs']= results['lngs'][i]
+    #     all_wines.append(wine_dict)
+    # # return jsonify(all_wines)
+    # print(all_wines)
 
 
 if __name__ == "__main__":
