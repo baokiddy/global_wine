@@ -44,6 +44,10 @@ def api():
     results = pd.read_sql_table('data', con=engine)
     return results.to_json(orient = 'table', index = False)
 
+@app.route("/map")
+def map():
+    return render_template("map.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
