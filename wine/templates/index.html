@@ -15,14 +15,14 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- <link href="sticky-footer-navbar.css" rel="stylesheet"> -->
-    <script src="common/modernizr.js"></script>
-    <script src="common/jquery-1.11.1.min.js"></script>
-    <script src="common/tabletop.js"></script>
-    <link type="text/css" rel="stylesheet" href="index.css">
+    <script src="static/common/modernizr.js"></script>
+    <script src="static/common/jquery-1.11.1.min.js"></script>
+    <script src="static/common/tabletop.js"></script>
+    <link type="text/css" rel="stylesheet" href="static/index.css">
 
     <style>
       body, html, .jumbotron {
-        height: 100%;
+        height: 97%;
       }
 
       .bd-placeholder-img {
@@ -54,7 +54,7 @@
       <nav class="navbar navbar-expand-md bg-light fixed-top">
       <div>
       <a class="navbar-brand" href="index.html" >
-          <img src="images/persiancatteam.jfif" width="25" height="25" class="d-inline-block align-top" alt="">
+          <img src="static/images/persiancatteam.jfif" width="25" height="25" class="d-inline-block align-top" alt="">
           Persian Cats' World of Wine
       </a>
       </div>
@@ -69,7 +69,7 @@
       <main role="main" class="inner cover text-center">
         <h1 class="cover-heading">Discover wine around the globe.</h1>
         <p class="lead"> We want to take you on a journey to find and view new wines from different regions around the world. 
-          Click below to see a map visualizing different wineries and a short summery on their stories! </p>
+          Click below to see a map visualizing different wineries and a short summary on their stories! </p>
         <p class="lead">
           <a href="winemap.html" class="btn btn-lg-center btn-secondary text-center">Map of Wine Around the Globe</a>
         </p>
@@ -107,7 +107,7 @@
       $(".rear-window").each(function() {
           
           $(this).css({left: (idx1-1) * 15});
-          $(this).css("background-image", "url("+"images/rear-Window/"+idx1+".png)");
+          $(this).css("background-image", "url("+"static/images/rear-Window/"+idx1+".png)");
           idx1++;
       });
 
