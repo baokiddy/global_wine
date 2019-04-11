@@ -46,7 +46,7 @@ def api():
 
 @app.route("/map")
 def map():
-    return render_template("map.html")
+    return render_template("winemap.html")
 
 
 if __name__ == "__main__":
