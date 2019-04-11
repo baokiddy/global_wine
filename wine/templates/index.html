@@ -24,7 +24,6 @@
       body, html, .jumbotron {
         height: 97%;
       }
-
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -33,13 +32,11 @@
         -ms-user-select: none;
         user-select: none;
       }
-
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
       }
-
       .footer {
         height: 5%;
       }
@@ -89,20 +86,16 @@
 
 
       <script>
-
       function randomNumbers(min,max)
       {
           return Math.floor(Math.random()*(max-min+1)+min);
       }
-
       $container1 = $(".one");
       for(var i = 0; i < 82; i++){
         
         $img = $("<div>").addClass("item rear-window").attr("data-order", i);
         $container1.append($img);
       }
-
-
       var idx1 = 1;
       $(".rear-window").each(function() {
           
@@ -110,26 +103,21 @@
           $(this).css("background-image", "url("+"static/images/rear-Window/"+idx1+".png)");
           idx1++;
       });
-
-
       $(".item").on("mouseover",function(e) {
           
           var current = $(this).data().order;
           var leftdif = ((current/81)*200)/current;
           var rightdif = (200-((current/81)*200))/(80-current);
           var wid = 15-(200-15)/81;
-
           $(".item").css({"width": "15px", "-webkit-transform": "translate(0,0)"})
           $(this).css({"width": "215px",  "-webkit-transform": "translate(-"+(current/81)*200+"px,0)"});
           $(this).prevAll(".item").each(function() {$( this ).css({"width": wid+"px", "-webkit-transform": "translate(-"+$(this).data().order*leftdif+"px,0)"});});
           $(this).nextAll(".item").each(function() {$( this ).css({"width": wid+"px", "-webkit-transform": "translate("+(81-$(this).data().order)*rightdif+"px,0)"});});
           console.log(current);
       });
-
       $(".item").mouseout(function(e) {
         $(".item").css({"width": "15px", "-webkit-transform": "translate(0,0)"});
       });
-
       </script>
 
   </footer>
