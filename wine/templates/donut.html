@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PCT World of Wine</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 
+    <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+  crossorigin=""></script>
+  <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <link type="text/css" rel="stylesheet" href="static/index.css">
+
+
+  <!-- c3 import  -->
+  <script src="static/c3_import/c3.min.js"></script>
+  <link href="static/c3_import/c3.css" rel="stylesheet">
+
+  <!-- <link href="sticky-footer-navbar.css" rel="stylesheet"> -->
+    <script src="static/common/modernizr.js"></script>
+    <script src="static/common/jquery-1.11.1.min.js"></script>
+    <script src="static/common/tabletop.js"></script>
+ 
+
+    <style>
+      body, html, .jumbotron {
+        height: 100%;
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .pie {
+        margin-top: 100px;
+
+      }
+    </style>
+
+  
+    <!-- Custom styles for this template -->
+    <!-- <link href="cover.css" rel="stylesheet"> -->
+  </head>
+  <body class = "text-center">
+    <header>
+      <nav class="navbar navbar-expand-md bg-light fixed-top">
+      <div>
+      <a class="navbar-brand" href="/" >
+          <img src="static/images/persiancatteam.jfif" width="25" height="25" class="d-inline-block align-top" alt="">
+          Persian Cats' World of Wine
+      </a>
+      </div>
+      </nav>
+    </header>
+
+    <div class="jumbotron" style="height:90%">
+    
+      <div class= "pie" id="chart"></div>
+
+    </div>
+
+  <footer class="footer text-center">
+    <div class="inner">
+        <p> Wine data visualization by <a href="https://github.com/baokiddy/project_3_persiancats.git">Persian Cats Team</a>.</p>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+
+  </footer>
+  <script type="text/javascript" src="static/js/config.js"></script>
+  <!-- c3 visualization -->
+  <script type="text/javascript" src="static/js/donut_logic.js"></script>
+</body>
+</html>

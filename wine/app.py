@@ -55,6 +55,10 @@ def csv():
     
     return wine_csv.to_json(orient = 'records')
 
+    
+@app.route("/donut")
+def donut():
+    return render_template("donut.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
