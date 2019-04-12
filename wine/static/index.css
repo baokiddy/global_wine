@@ -231,7 +231,7 @@ li{
 	padding-right: 65px;
 }
 
-.png{
+.png, .jpeg {
 	position: absolute;
 	top: 0;
 	display: block;

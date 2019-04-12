@@ -97,25 +97,65 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
 
+    <script src="{{url_for('static', filename='app2.js')}}"></script>
+
     <!-- Script creating picture carousel visualization -->
     <script>
-
-      // Creating img tag within container one
-      $container1 = $(".one");
-      for(var i = 0; i < 82; i++){
+      
+      console.log("here")
+      d3.json("/csv", function(wineData) {
+        console.log("here again")
+        console.log(wineData)
         
-        $img = $("<div>").addClass("item rear-window").attr("data-order", i);
-        $container1.append($img);
-      }
+        // if (error) throw error;
+        // // Creating img tag within container one
+        // $container1 = $(".one");
 
-      // Pulling image from file and layering them with the correct width
-      var idx1 = 1;
-      $(".rear-window").each(function() {
+        // for(var i = 0; i < 82; i++){
           
-          $(this).css({left: (idx1-1) * 15});
-          $(this).css("background-image", "url("+"static/images/rear-Window/"+idx1+".png)");
-          idx1++;
+        //   $img = $("<div>").addClass("item rear-window").attr("data-order", i);
+        //   $container1.append($img);
+        // }
+        
+        // // Pulling image from file and layering them with the correct width
+        
+        // var picPosition = 1;
+        // //var pics = data.winePhotos;
+
+        // // wineData.forEach(function(data) {
+              
+        // // });
+          
+
+        // $(".rear-window").each(function() {
+
+        //   $(this).css({left: (picPosition-1) * 15});
+          
+        //   $(this).css("background-image", `url(${wineData.winePhotos})`);
+        //   // $(this).css("background-image", `url()`);
+        //   picPosition++;
+
+        // });
+      
+        // // console.log(pics);
       });
+
+      // // Creating img tag within container one
+      // $container1 = $(".one");
+      // for(var i = 0; i < 82; i++){
+        
+      //   $img = $("<div>").addClass("item rear-window").attr("data-order", i);
+      //   $container1.append($img);
+      // }
+
+      // // Pulling image from file and layering them with the correct width
+      // var idx1 = 1;
+      // $(".rear-window").each(function() {
+          
+      //     $(this).css({left: (idx1-1) * 15});
+      //     $(this).css("background-image", "url("+"static/images/rear-Window/"+idx1+".png)");
+      //     idx1++;
+      // });
 
       // Mouseover event where image "pops up" into view with slight zoom
       $(".item").on("mouseover",function(e) {

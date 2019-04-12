@@ -48,6 +48,13 @@ def api():
 def map():
     return render_template("winemap.html")
 
+@app.route("/csv")
+def csv():
+
+    wine_csv = pd.read_csv("static/images/winephotos.csv")
+    
+    return wine_csv.to_json(orient = 'records')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
