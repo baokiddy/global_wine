@@ -1,0 +1,242 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700|Exo+2:300,600);
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic|Titillium+Web:400,200,200italic,300,300italic,400italic,600,700,600italic,700italic,900|Fjalla+One|Bree+Serif);
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+/* html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0} */
+ 
+/* Solarized Palette - http://ethanschoonover.com/solarized ---------
+  lightgray      : #819090;
+  gray           : #708284;
+  mediumgray     : #536870;
+  darkgray       : #475B62;
+  darkblue       : #0A2933;
+  darkerblue     : #042029;
+  paleryellow    : #FCF4DC;
+  paleyellow     : #EAE3CB;
+  yellow         : #A57706;
+  orange         : #BD3613;
+  red            : #D11C24;
+  pink           : #C61C6F;
+  purple         : #595AB7;
+  blue           : #2176C7;
+  cyan           : #259286;
+  green          : #738A05; */
+
+
+/* .pinterest-image img{
+	position: relative;
+}
+.hover-pinterest {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 999;
+	background-image: url('images/pinterest.png'); 
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	display: none;
+}
+.pin-it-link {
+	height: 100%;
+	width: 100%;
+	display: block;
+} */
+
+
+
+.container{
+	position: relative;
+	padding-left: 5%;
+	padding-right: 5%;
+	width: 1230px;
+	height: 320px;
+	display: block;
+	overflow: hidden;
+	border:none;
+}
+
+
+.item { width: 15px; height:280px; position:absolute; background-size: cover; background-position: center;  background-color:black;
+        -webkit-transition: -webkit-transform 0 ease, width 0 ease;}
+
+.scale{
+	position: absolute;
+	width:100%;
+	z-index: 100;
+	bottom:0px;
+}
+
+/* .grey{border-bottom: 10px solid #303030;}
+.white{border-bottom: 10px solid white;}
+.orange{border-bottom: 10px solid #B89300;}
+.green{border-bottom: 10px solid #6F996F;}
+.pink{border-bottom: 10px solid #FFDFDF;}
+.red{border-bottom: 10px solid #D11C24;}
+.blue{border-bottom: 10px solid #0A2933;}
+.maroon{border-bottom: 10px solid #8B0000;}
+.brown{border-bottom: 10px solid #8B4513;}
+.teal{border-bottom: 10px solid #008080;} */
+
+
+.fixed{
+    overflow: hidden;
+    height: 100%;
+}
+
+body{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.top{
+	padding: 20px;
+	padding-left: 8%;
+}
+
+
+
+span{
+	line-height:25px;
+	font-family: "Lato", Helvetica;
+	font-size: 12px;
+	font-weight: 100;
+	color: black;
+	font-style: italic;
+
+}
+
+p{
+	font-family: Helvetica;
+	font-size: 12px;
+	font-weight: 100;
+	line-height: 14px;
+	color: black;
+	text-align: center;
+	padding-top:10px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.gallery{
+	position: absolute;
+	top:20vh;
+	width: 100vw;
+
+}
+
+.row{
+	position: relative;
+	right: 10px;
+	width: 100vw;
+	height:100px;
+	padding: 20px 10px;
+	background-color: #E9ECEF;
+	overflow: hidden;
+}
+
+
+.title{
+	float: left;
+	width: 10%;
+	padding: 20px;
+	text-align: center;
+}
+
+h1{
+	font-family: "Bree Serif", Helvetica;
+	font-size: 3.3em;
+	font-weight: 100;
+	vertical-align:middle;
+	padding-top:30px;
+	color: black;
+}
+
+
+h2{
+	font-family: "Bree Serif", Helvetica;
+	text-align:left;
+	font-size: 16px;
+	color: black;
+	font-weight: 400;
+	padding-bottom: 10px;
+
+}
+
+h3{
+	font-family: "Lato", Helvetica;
+	text-align:left;
+	font-size: 14px;
+	color: black;
+	font-weight: 300;
+}
+
+h4{
+	font-family: "Lato", Helvetica;
+	font-size: 1.2em;
+	color: black;
+	font-weight: 100;
+	line-height:1.3em;
+}
+
+
+.overlay {
+  position:fixed;
+  height:100%;
+  width:100%;
+  left:0;
+  top:0;
+  background-color:rgba(255,255,255,0.5);
+  z-index: 99;
+  display:none;
+}
+
+.detail{
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	margin: 0;
+}
+
+.section{
+	position: absolute;
+	top:0;
+	right:60px;
+	width: 650px;
+} */
+
+.description{
+	position: absolute;
+	width: 90%;
+	top:40px;
+	left:70px;
+	display: block;
+	padding-right: 50px;
+}
+
+
+ul{
+	position: absolute;
+	width: 100%;
+	top:160px;
+	left:60px;
+	display: block;
+	padding-right: 50px;}
+
+
+li{
+	display: inline-block;
+	width: 150px;
+	padding-right: 65px;
+}
+
+.png{
+	position: absolute;
+	top: 0;
+	display: block;
+}
+
+
+
+
