@@ -3,9 +3,19 @@ body {
   margin: 0;
 }
 
-#map,
 body,
 html {
   height: 100%;
   width: 100%;
 }
+
+#map {
+	background-color:#ddd;
+	position: fixed;
+	padding: 0em;
+	left: 0%;
+	top: 7.1%;
+  height:90%;
+  width:100%;
+}
+
