@@ -47,7 +47,10 @@ def api():
 @app.route("/map")
 def map():
     return render_template("winemap.html")
-
+    
+@app.route("/donut")
+def donut():
+    return render_template("donut.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

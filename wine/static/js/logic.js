@@ -18,7 +18,7 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 // Assemble API query URL
 var url = '/api'
 // Grab the data with d3
-d3.json(url, function(data){
+d3.json(url).then(function(data){
   console.log(data)
 
   console.log(data.data[0].lats)
