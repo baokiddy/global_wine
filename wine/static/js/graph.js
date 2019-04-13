@@ -49,7 +49,6 @@ var chart = c3.generate({
 
 
 var chart_2 = c3.generate({
-    bindto : '#chart_2',
     data: {
         columns: [
             ['Pinot Noir', 89.91, 52.11],
@@ -59,33 +58,15 @@ var chart_2 = c3.generate({
             ['Bordeaux-style Red Blend', 88.71, 44.67],
         ],
         type: 'bar',
-        }
+        // types: {
+        //     data3: 'spline',
+        //     data4: 'line',
+        //     data6: 'area',
+        // },
+        // groups: [
+        //     ['Pinot Noir']
+        // ]
     }
-);
+});
 
 
-
-
-
-
-
-
-
-// setTimeout(function () {
-//   chart.load({
-//       columns: [
-//           ["setosa", 2, 2, 2],
-//           ["versicolor", 1, 1],
-//           ["virginica", 2.0, .01],
-//       ]
-//   });
-// }, 1500);
-
-// setTimeout(function () {
-//   chart.unload({
-//       ids: 'data1'
-//   });
-//   chart.unload({
-//       ids: 'data2'
-//   });
-// }, 2500);
