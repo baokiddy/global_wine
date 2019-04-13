@@ -48,6 +48,20 @@ var chart = c3.generate({
 })
 
 
+var chart_2 = c3.generate({
+    bindto : '#chart_2',
+    data: {
+        columns: [
+            ['Pinot Noir', 89.91, 52.11],
+            ['Chardonnay', 88.94, 39.37],
+            ['Red Blend', 88.51, 35.56],
+            ['Cabernet Sauvignon', 88.86, 49.01],
+            ['Bordeaux-style Red Blend', 88.71, 44.67],
+        ],
+        type: 'bar',
+        }
+    }
+);
 
 
 
