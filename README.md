@@ -2,7 +2,7 @@
 
 ## Introduction
 
-  Our project was inspired by the idea of using our growing map visualization skillset to display different wineries and wine types around the globe. We found an amazingly diverse data set on kaggle and wanted to visualize it for anyone interested on learning about where the wine they love comes from. We were also inspired by this [NYC fashion visualization | http://www.nytimes.com/newsgraphics/2013/09/13/fashion-week-editors-picks/index.html ], and thought it would be a good way to engage our audience on the homepage before they dove into the data on dertailed within our map visualization. 
+  Our project was inspired by the idea of using our growing map visualization skillset to display different wineries and wine types around the globe. We found an amazingly diverse data set on kaggle and wanted to visualize it for anyone interested on learning about where the wine they love comes from. We were also inspired by this [NYC fashion visualization](http://www.nytimes.com/newsgraphics/2013/09/13/fashion-week-editors-picks/index.html), and thought it would be a good way to engage our audience on the homepage before they dove into the data on dertailed within our map visualization. 
   
   Additionally, we wanted to make sure we analysed the data we found and decided to focus on the areas with the most wineries as well as a comparison of types of wine and their costs.
 
@@ -16,7 +16,7 @@ So, how did we go about setting up our data visualization? We used the following
  - Step 3: Set up HTML page with Bootstra
            Theme: https://v4-alpha.getbootstrap.com/examples/
  - Step 4: Create starter code for world map and add in layers to illustrate the wineries and wine types
- - Step 4: Use ideas found in [here|https://github.com/clairesunstudio/fashion-viz] and create D3 image carousel 
+ - Step 4: Use ideas found in [here](https://github.com/clairesunstudio/fashion-viz) and create D3 image carousel 
 
 
 ## Results 
