@@ -15,9 +15,9 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- Webpage styling -->
-    <script src="static/common/modernizr.js"></script>
+    <!-- <script src="static/common/modernizr.js"></script>
     <script src="static/common/jquery-1.11.1.min.js"></script>
-    <script src="static/common/tabletop.js"></script>
+    <script src="static/common/tabletop.js"></script> -->
     <link type="text/css" rel="stylesheet" href="static/index.css">
 
     <style>
@@ -48,24 +48,21 @@
     <!-- Webpage header -->
     <header>
       <nav class="navbar navbar-expand-md bg-light fixed-top">
-      <div>
-      <a class="navbar-brand" href="/" class="align-middle" >
-
+      <a class="navbar-brand align-middle" href="/">
           <!-- Logo and link back to main page -->
           <img src="static/images/persiancatteam.jfif" width="25" height="25" class="d-inline-block align-middle" alt="">
           Persian Cats' World of Wine
       </a>
-
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Menu </a>
-            <ul class="dropdown-menu navbar-brand">
-                <li><a href="/map">Map of Wineries</a></li>
-                <li><a href="/donut">Winery data analysis</a></li>
-            </ul>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Menu </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/map">Map of Wineries</a>
+              <a class="dropdown-item" href="/donut">Winery data analysis</a>
+            </div>
         </li>
         </ul>
-
       </div>
       </nav>
     </header>
@@ -109,6 +106,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
 
     <script src="{{url_for('static', filename='app2.js')}}"></script>
+    <!-- <script src="{{url_for('static', filename='app3.js')}}"></script> -->
 
     <!-- Script creating picture carousel visualization -->
     <script>
